@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flight Booking</title>
+    <title>4th-Assignment</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap"
@@ -41,7 +41,7 @@
             <div class="inputs">
                 <div class="input-group">
                     <label" for="">Departure</label>
-                    <input class="inp-style" type="date" name="">
+                        <input class="inp-style" type="date" name="">
                 </div>
                 <div class="input-group">
                     <label for="">Return</label>
@@ -51,17 +51,17 @@
             <div class="input-group f-class" id="firstClass">
                 <div>
                     <label for="">First Class ($150)</label>
-                    <input class="inp-style inp-width" type="number" name="" >
+                    <input class="inp-style inp-width" type="number" name="">
                 </div>
                 <div class="plus-minus-btn">
                     <p> <span class="plus">+</span> <span class="minus">-</span> </p>
                 </div>
             </div>
-            
+
             <div class="input-group f-class" id="economyClass">
                 <div>
                     <label for="">Economy ($100)</label>
-                    <input class="inp-style inp-width" type="number" name="" >
+                    <input class="inp-style inp-width" type="number" name="">
                 </div>
                 <div class="plus-minus-btn">
                     <p> <span class="plus">+</span> <span class="minus">-</span> </p>
@@ -100,12 +100,14 @@
 
         <div class="booking-content">
             <h1>discover <br> around the world</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise voluptatibus quam</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias
+                veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise
+                voluptatibus quam</p>
         </div>
-    </section>
+        </section>
 
-    <!--Thank You-->
-    <script>
+        <!--Thank You-->
+        <script>
             const total = document.getElementById('total');
             const vat = document.getElementById('vat');
             const totalWithVat = document.getElementById('totalWithVat');
@@ -113,7 +115,7 @@
             let firstClassNumber = 0;
             let economyClassNumber = 0;
 
-
+        // calculateTotal  function 
             function calculateTotal() {
                 const firstClassPrice = firstClassNumber * 150;
                 const economyClassPrice = economyClassNumber * 100;
@@ -138,15 +140,15 @@
             })
 
             firstClassMinusButton.addEventListener('click', (e) => {
-                if(Number(firstClassInput.value) > 0) {
+                if (Number(firstClassInput.value) > 0) {
                     firstClassNumber = Number(firstClassInput.value) - 1;
                     firstClassInput.value = firstClassNumber;
                     calculateTotal();
                 }
             })
-            
+
             firstClassInput.addEventListener('change', (e) => {
-                if(Number(e.target.value) > 0) {
+                if (Number(e.target.value) > 0) {
                     firstClassNumber = Number(e.target.value);
                 }
             })
@@ -166,15 +168,15 @@
             })
 
             economyClassMinusButton.addEventListener('click', (e) => {
-                if(Number(economyClassInput.value) > 0) {
+                if (Number(economyClassInput.value) > 0) {
                     economyClassNumber = Number(economyClassInput.value) - 1;
                     economyClassInput.value = economyClassNumber;
                     calculateTotal();
                 }
             })
-            
+
             economyClassInput.addEventListener('change', (e) => {
-                if(Number(e.target.value) > 0) {
+                if (Number(e.target.value) > 0) {
                     economyClassNumber = Number(e.target.value);
                 }
             })
@@ -185,7 +187,7 @@
                 confirm(`Pay ${totalWithVat.innerText} to book?`)
             })
 
-    </script>
+        </script>
 </body>
 
 </html>
